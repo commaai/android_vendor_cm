@@ -75,7 +75,7 @@ endif
 
 ifneq ($(TARGET_BUILD_VARIANT),eng)
 # Enable ADB authentication
-ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
+# ADDITIONAL_DEFAULT_PROPERTIES += ro.adb.secure=1
 endif
 
 # Copy over the changelog to the device
@@ -259,8 +259,8 @@ PRODUCT_PACKAGES += \
     su
 endif
 
-PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=0
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    persist.sys.root_access=0
 
 DEVICE_PACKAGE_OVERLAYS += vendor/cm/overlay/common
 
